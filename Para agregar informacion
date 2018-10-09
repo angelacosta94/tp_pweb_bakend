@@ -1,0 +1,35 @@
+{
+    "cliente":{
+        "nombre":"norma",
+        "apellido":"rojas",
+        "nroDocumento": 4578839,
+        "tipoDocumento": "CI",
+        "nacionalidad":"paraguaya",
+        "email":"normarojas268@gmail.com",
+        "telefono":"0982120296",
+        "fechaNacimiento":"1995-10-16"
+    }
+    "bolsaDePuntos":{
+        "fechaAsignacion":"2000-10-10",
+        "fechaCaducidad":"2000-10-10",
+        "puntajeAsignado": 1000,
+        "puntajeUtilizado": 800,
+        "saldoPuntos": 200,
+        "montoOperacion":10,
+        "cliente":{"idCliente":1}
+    }
+    "conceptoUsoPuntos"{
+       "descripcion": "Concepto de uso de puntos de prueba",
+       "puntosRequeridos": 1000
+	}
+	"vencimientoDePuntos":{
+	    "inicioValidez": "2018-01-01",
+	    "finValidez": "2018-12-31",
+	    "diasDuracion": 4
+	}
+	"reglaAsignacion":{
+	    "desde": 0,
+	    "hasta": 2147483647,
+	    "valor": 50000
+	}
+}

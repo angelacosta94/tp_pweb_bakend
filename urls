@@ -1,0 +1,71 @@
+localhost:8080/tp1pwb/clientes
+post:{
+        "nombre":"norma",
+        "apellido":"rojas",
+        "nroDocumento": 4578839,
+        "tipoDocumento": "CI",
+        "nacionalidad":"paraguaya",
+        "email":"normarojas268@gmail.com",
+        "telefono":"0982120296",
+        "fechaNacimiento":"1995-10-16"
+}
+localhost:8080/tp1pwb/conceptos-uso
+post:{
+       "descripcion": "Concepto1",
+       "puntosRequeridos": 10
+	}
+	{
+       "descripcion": "Concepto2",
+       "puntosRequeridos": 1000
+	}
+	{
+       "descripcion": "Concepto3",
+       "puntosRequeridos": 500
+	}
+	
+localhost:8080/tp1pwb/vencimientos
+post:{
+	    "inicioValidez": "2018-01-01",
+	    "finValidez": "2018-12-31",
+	    "diasDuracion": 4
+	}
+localhost:8080/tp1pwb/regla-asignacion
+post:{
+	    "desde": 0,
+	    "hasta": 2147483647,
+	    "valor": 5000
+	}
+
+localhost:8080/tp1pwb/puntos/equivalencia?monto=200000
+
+localhost:8080/tp1pwb/clientes
+localhost:8080/tp1pwb/carga?cliente=1&monto=20000000    (post)
+localhost:8080/tp1pwb/bolsa/cliente?idCliente=1
+
+localhost:8080/tp1pwb/conceptos-uso
+localhost:8080/tp1pwb/puntos/utilizar-puntos?cliente=1&concepto=3
+localhost:8080/tp1pwb/puntos/utilizar-puntos?cliente=1&concepto=4
+localhost:8080/tp1pwb/bolsa/cliente?idCliente=1
+
+localhost:8080/tp1pwb/uso-puntos/cliente/1
+localhost:8080/tp1pwb/uso-puntos/concepto/3
+localhost:8080/tp1pwb/uso-puntos/fecha/2018-04-16
+
+localhost:8080/tp1pwb/bolsa/rango?valor1=1&valor2=1000
+
+localhost:8080/tp1pwb/clientes/vencepuntos?dias=5
+
+localhost:8080/tp1pwb/clientes/cumple?fecha=10-15
+localhost:8080/tp1pwb/clientes/documento?documento=4578839
+localhost:8080/tp1pwb/clientes/nacionalidad?nacionalidad=paraguaya
+
+PARA REPORTES: Agregar el parametro export a la url
+Ejemplo:
+localhost:8080/tp1pwb/clientes/nacionalidad?nacionalidad=paraguaya&export=PDF
+localhost:8080/tp1pwb/clientes/nacionalidad?nacionalidad=paraguaya&export=XLS
+
+localhost:8080/tp1pwb/uso-puntos/cliente/1?export=PDF
+localhost:8080/tp1pwb/uso-puntos/cliente/1?export=XLS
+
+localhost:8080/tp1pwb/bolsa/rango?valor1=1&valor2=1000&export=PDF
+localhost:8080/tp1pwb/bolsa/rango?valor1=1&valor2=1000&export=XLS

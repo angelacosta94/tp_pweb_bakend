@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BolsaDePuntos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab703d27-7303-48ec-bd1d-84aea61e104f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BolsaDePuntosDataAdapter.xml"/>
+	<parameter name="TITULO_REPORTE" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[lista]]>
+	</queryString>
+	<field name="cliente" class="py.com.progweb.prueba.model.Cliente">
+		<property name="net.sf.jasperreports.json.field.expression" value="cliente"/>
+		<fieldDescription><![CDATA[cliente]]></fieldDescription>
+	</field>
+	<field name="puntajeUtilizado" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="puntajeUtilizado"/>
+		<fieldDescription><![CDATA[puntajeUtilizado]]></fieldDescription>
+	</field>
+	<field name="puntajeAsignado" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="puntajeAsignado"/>
+		<fieldDescription><![CDATA[puntajeAsignado]]></fieldDescription>
+	</field>
+	<field name="fechaAsignacion" class="java.sql.Date">
+		<property name="net.sf.jasperreports.json.field.expression" value="fechaAsignacion"/>
+		<fieldDescription><![CDATA[fechaAsignacion]]></fieldDescription>
+	</field>
+	<field name="fechaCaducidad" class="java.sql.Date">
+		<property name="net.sf.jasperreports.json.field.expression" value="fechaCaducidad"/>
+		<fieldDescription><![CDATA[fechaCaducidad]]></fieldDescription>
+	</field>
+	<field name="montoOperacion" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="montoOperacion"/>
+		<fieldDescription><![CDATA[montoOperacion]]></fieldDescription>
+	</field>
+	<field name="saldoPuntos" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="saldoPuntos"/>
+		<fieldDescription><![CDATA[saldoPuntos]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="20" width="555" height="30" uuid="2ade2ff5-2bff-4c3b-8dd5-12cd3b5bb853"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO_REPORTE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="81" height="50" backcolor="#99FFFF" uuid="bd23b4f8-656c-4ec2-829d-7fcf22d09926">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3c39ae4-ffe5-4a74-a320-6883e5c138e7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="81" y="0" width="79" height="50" backcolor="#99FFFF" uuid="6554d589-dabf-4396-8ff7-88d2b25f1f9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f87d257b-871f-4202-837f-c44908a8c2aa"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puntaje asignado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="160" y="0" width="79" height="50" backcolor="#99FFFF" uuid="d9e9ede2-b972-44fb-9139-bf1824235693">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc6be0ce-0b4d-4ce8-8206-a2cc4fad6e35"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puntaje utilizado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="239" y="0" width="79" height="50" backcolor="#99FFFF" uuid="8275a464-5d87-430d-9c6a-7dfea392688b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8dea33e5-176d-4fb1-a9e8-dc760e52f4a1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de asignación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="0" width="79" height="50" backcolor="#99FFFF" uuid="a4707355-b7f9-490d-94c8-e45438262dbd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="31d8d7cf-1ae0-454e-a6ce-dde1371152bc"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de caducidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="397" y="0" width="79" height="50" backcolor="#99FFFF" uuid="8889daac-86a2-47ab-9c94-809ab1bfe2b3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef866489-5428-46d3-a135-37c8080332a9"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto de la operacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="476" y="0" width="79" height="50" backcolor="#99FFFF" uuid="70ceb7bf-40bd-466b-b19b-c3bbf4c8f188">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d7c556d2-8802-4ff9-affe-7e145e2bebf0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="81" height="30" uuid="1b1e286d-bf14-49d6-be0b-31aaf83e1b18">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3c39ae4-ffe5-4a74-a320-6883e5c138e7"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cliente}.getNombre()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="79" height="30" uuid="d47167c8-9026-4f91-aba7-72d0c7a5333a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f87d257b-871f-4202-837f-c44908a8c2aa"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{puntajeAsignado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="79" height="30" uuid="f2302e74-4707-4f3d-865d-9e3662cf923f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc6be0ce-0b4d-4ce8-8206-a2cc4fad6e35"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{puntajeUtilizado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="79" height="30" uuid="c1169764-e233-440a-9190-de639c6305b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8dea33e5-176d-4fb1-a9e8-dc760e52f4a1"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaAsignacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="79" height="30" uuid="b9bea7bb-1f81-4c6c-b2b6-f60f938ff93d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="31d8d7cf-1ae0-454e-a6ce-dde1371152bc"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaCaducidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="79" height="30" uuid="c3870575-afd4-4f62-81b8-ffeb14dc293c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef866489-5428-46d3-a135-37c8080332a9"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{montoOperacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="30" uuid="8d6c699e-4b18-4daa-88bf-0cdad53b22b2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d7c556d2-8802-4ff9-affe-7e145e2bebf0"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{saldoPuntos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

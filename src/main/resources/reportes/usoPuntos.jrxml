@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UsoPuntos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2a92404-2e38-48eb-9631-465729d3fae3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterUsoPuntos.xml"/>
+	<parameter name="TITULO_REPORTE" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[lista]]>
+	</queryString>
+	<field name="cliente" class="py.com.progweb.prueba.model.Cliente">
+		<property name="net.sf.jasperreports.json.field.expression" value="cliente"/>
+		<fieldDescription><![CDATA[cliente]]></fieldDescription>
+	</field>
+	<field name="puntosUtilizados" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="puntosUtilizados"/>
+		<fieldDescription><![CDATA[puntosUtilizados]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<property name="net.sf.jasperreports.json.field.expression" value="fecha"/>
+		<fieldDescription><![CDATA[fecha]]></fieldDescription>
+	</field>
+	<field name="conceptoUsoPuntos" class="py.com.progweb.prueba.model.ConceptoUsoPuntos">
+		<property name="net.sf.jasperreports.json.field.expression" value="conceptoUsoPuntos"/>
+		<fieldDescription><![CDATA[conceptoUsoPuntos]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="20" width="555" height="30" uuid="01e7db1a-6dcd-4f9f-90dd-bc187d7d5f2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO_REPORTE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="141" height="30" backcolor="#99FFFF" uuid="97e5fe26-8ca5-4cbb-a64b-80a427390f84">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19439d5f-9d98-431b-9fda-cde492cd7265"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="141" y="0" width="138" height="30" backcolor="#99FFFF" uuid="27506513-07c4-4f1a-b7dd-b10382b882c9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0079a29-d2fe-44d0-a381-b2d8d153231b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puntos utilizados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="279" y="0" width="138" height="30" backcolor="#99FFFF" uuid="3a67d0b1-dd3e-4433-909c-70dd710ea952">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9cb0a706-f216-4cf4-9ab3-53d96507d5b0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="417" y="0" width="138" height="30" backcolor="#99FFFF" uuid="e52562b0-c90f-4b1f-810f-c2c24a342151">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a92638c3-9b41-4d55-b887-cddfd293eb73"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Concepto de uso]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="e4daba8a-4832-46a4-a899-ff11806fa818">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19439d5f-9d98-431b-9fda-cde492cd7265"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cliente}.getNombre()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="378cef2b-0e31-42ce-9158-e206318339ee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0079a29-d2fe-44d0-a381-b2d8d153231b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{puntosUtilizados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="5df52b10-5f1d-454f-9389-fdb88c570d1c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9cb0a706-f216-4cf4-9ab3-53d96507d5b0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="4e0f42fe-9ec2-43ba-89fe-54b293d9e58f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a92638c3-9b41-4d55-b887-cddfd293eb73"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{conceptoUsoPuntos}.getDescripcion()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
